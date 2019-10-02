@@ -1,0 +1,17 @@
+.container {
+    display: grid;
+    grid-template-columns: 9vh 91vh;
+    grid-template-rows: 8vh 92vh;
+    grid-template-areas: "app-header app-header" "app-nav router-outlet";
+    grid-gap: 0;
+
+    height: 100%;
+
+    app-header { grid-area: app-header; }
+  
+    app-nav { grid-area: app-nav; }
+    
+    .content { grid-area: router-outlet; }
+
+}
+  

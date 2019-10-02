@@ -24,26 +24,26 @@ import { ErrorComponent } from './error/error.component';
 import { ErrorRouteComponent } from './error/error-route/error-route.component';
 
 const routes: Routes = [
-  { path: "", component: AppComponent },
-  { path: "/landing", component: LandingComponent },
+  // Landing route
+  { path: "", component: LandingComponent },
   // Authetication routes
-  { path: "/auth", component: AuthComponent },
-  { path: "/auth/login", component: LoginComponent },
-  { path: "/auth/register", component: RegisterComponent },
-  { path: "/auth/forgot", component: AppComponent },
+  { path: "auth", component: AuthComponent },
+  { path: "auth/login", component: LoginComponent },
+  { path: "auth/register", component: RegisterComponent },
+  { path: "auth/forgot", component: AppComponent },
   // Dashboard route
-  { path: "/dashboard", component: DashboardComponent },
+  { path: "dashboard", component: DashboardComponent },
   // Group routes
-  { path: "/groups", component: MyGroupsComponent },
-  { path: "/groups/single", component: SingleGroupComponent },
-  { path: "/groups/create", component: CreateGroupComponent },
+  { path: "groups", component: MyGroupsComponent },
+  { path: "groups/single", component: SingleGroupComponent },
+  { path: "groups/create", component: CreateGroupComponent },
   // Account routes
-  { path: "/account", component: MyAccountComponent },
-  { path: "/invites", component: InvitesComponent },
+  { path: "account", component: MyAccountComponent },
+  { path: "invites", component: InvitesComponent },
   // Dataset routes
-  { path: "/datasets", component: MyDatasetsComponent },
-  { path: "/datasets/single", component: InvitesComponent },
-  { path: "/datasets/upload", component: InvitesComponent },
+  { path: "datasets", component: MyDatasetsComponent },
+  { path: "datasets/single", component: InvitesComponent },
+  { path: "datasets/upload", component: InvitesComponent },
   // Error route
   { path: "**", component: ErrorRouteComponent }
 ];
