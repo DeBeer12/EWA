@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'UrbanAnalytics';
+  navExtended : boolean = false;
+
+  changeNav = (event) => {
+   this.navExtended = event;
+  }
 }
+
+

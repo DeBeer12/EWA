@@ -1,6 +1,6 @@
 <div class="container">
-  <app-header></app-header>
-  <app-nav></app-nav>
+  <app-header [navExtended]="navExtended" (changeNav)="changeNav($event)"></app-header>
+  <app-nav [navExtended]="navExtended"></app-nav>
 
   <div class="content">
     <!-- All content gets loaded in here -->
