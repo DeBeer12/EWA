@@ -7,8 +7,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Nunito Sans', sans-serif;
+  color: white;
 }
 
+$color-primary: white;
+$color-secondary: #c05e2c;
+$color-tertiary: white;
+$color-quaternary:white;
 
 @mixin for-phone-only {
   @media (max-width: 599px) {
