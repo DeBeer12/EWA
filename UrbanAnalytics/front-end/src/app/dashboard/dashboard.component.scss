@@ -11,8 +11,6 @@
 
   height: 100%;
 
-  color: white;
-
   // Set grid ereas
   .recentPublic {
     grid-area: recentPublic;
@@ -33,6 +31,12 @@
   div {
     background-color: rgba(138, 138, 138, 0.1);
     border-radius: .5rem;
+    padding: 2rem;
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
   }
 
   //Change grid if device is a phone
@@ -53,5 +57,4 @@
       margin: 10% 10% 0 10%;
     }
   }
-
 }
