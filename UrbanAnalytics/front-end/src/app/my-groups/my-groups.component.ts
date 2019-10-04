@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user/user.service';
 
 @Component({
   selector: 'app-my-groups',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-groups.component.scss']
 })
 export class MyGroupsComponent implements OnInit {
+  selectedGroup: {} = this.userService.getGroupDetails()[1];
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
-
 }
