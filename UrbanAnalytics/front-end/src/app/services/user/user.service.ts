@@ -14,7 +14,23 @@ export class UserService {
     };
 
   // TODO: Make model for groupData
-  groupDetails: { groupName: string, createdOn: Date, createdBy: string, memberCount: number, imgUrl: string, id: number, members: [] }[]
+  groupDetails: {
+    groupName: string,
+    createdOn: Date,
+    createdBy: string,
+    memberCount: number,
+    imgUrl: string,
+    id: number,
+    members: {
+      firstname: string, lastname: string, email: string
+    }[]
+    datasets: {
+      name: string,
+      uploadedOn: Date,
+      uploadedBy: string,
+      id: number
+    }[]
+  }[]
     = [
       {
         groupName: "Ewa Project",
@@ -23,7 +39,10 @@ export class UserService {
         memberCount: 11,
         imgUrl: "",
         id: 0,
-        members: []
+        members: [],
+        datasets: [
+
+        ]
       }, {
         groupName: "EU Energy",
         createdOn: new Date(),
@@ -31,8 +50,27 @@ export class UserService {
         memberCount: 61,
         imgUrl: "",
         id: 1,
+        // Gets filled with userData models
         members: [
-
+          {
+            firstname: "Hans",
+            lastname: "Anders",
+            email: "HansAnders@gmail.com",
+          }
+        ],
+        // Make datasets a model
+        datasets: [
+          {
+            name: "Cool dataset",
+            uploadedOn: new Date(),
+            uploadedBy: "Jerry",
+            id: 0
+          }, {
+            name: "Hot dataset",
+            uploadedOn: new Date(),
+            uploadedBy: "Danny",
+            id: 1
+          }
         ]
       },
     ];
