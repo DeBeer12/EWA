@@ -33,7 +33,7 @@
   // Group details component
   .groupDetails {
     grid-area: groupDetails;
-    margin: 7% 7% 0 0;
+    margin: 5% 7% 0 0;
 
     .groupDetailsContent {
       display: flex;
@@ -64,7 +64,7 @@
   // Create group component
   .createGroup {
     grid-area: createGroup;
-    margin: 0 7% 7% 0;
+    margin: 0 7% 5% 0;
 
     .createGroupContent {
       display: flex;
@@ -87,7 +87,7 @@
   // Group list component
   .groupList {
     grid-area: groupList;
-    margin: 7% 0 7% 7%;
+    margin: 5% 0 5% 7%;
   }
 
   // Style all divs in container

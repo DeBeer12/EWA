@@ -1,1 +1,55 @@
-<p>single-group works!</p>
+<div class="cont">
+
+  <div class="groupName">
+    <!-- Back button -->
+    <h1>{{this.selectedGroup.groupName}}</h1>
+    <!-- Edit button for admin? -->
+  </div>
+
+  <div class="datasetDetails">
+    <h1>Dataset details</h1>
+    <hr>
+    <!-- Dataset details here -->
+    <div class="datasetDetailsContent">
+      <table>
+        <tr>
+          <td>Name:</td>
+          <td>{{this.selectedDataset.name}}</td>
+        </tr>
+        <tr>
+          <td>Uploaded by:</td>
+          <td>{{this.selectedDataset.uploadedBy}}</td>
+        </tr>
+        <tr>
+          <td>Uploaded on:</td>
+          <td>{{this.selectedDataset.uploadedOn.toDateString()}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="datasetList">
+    <h1>Dataset list</h1>
+    <hr>
+
+    <div class="datasetListContent">
+      <!-- Dataset list here -->
+
+      <!-- Temporary test -->
+      <table>
+        <tr *ngFor="let dataset of this.selectedGroup.datasets" (click)="this.selectedDataset = dataset">
+          {{dataset.name}}
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="groupMembers">
+    <h1>Group members</h1>
+    <hr>
+    <div class="groupMemberContent">
+      <!-- Group members list here (Add, Delete Update ?) -->
+    </div>
+  </div>
+</div>

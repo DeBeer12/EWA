@@ -33,19 +33,19 @@
   // Recent public component
   .recentPublic {
     grid-area: recentPublic;
-    margin: 7% 7% 0 0;
+    margin: 5% 7% 0 0;
   }
 
   //Alerts component
   .alerts {
     grid-area: alerts;
-    margin: 0 7% 7% 0;
+    margin: 0 7% 5% 0;
   }
 
   //Recent private component
   .recentPrivate {
     grid-area: recentPrivate;
-    margin: 7% 0 7% 7%;
+    margin: 5% 0 5% 7%;
   }
 
   // Style all divs in container
