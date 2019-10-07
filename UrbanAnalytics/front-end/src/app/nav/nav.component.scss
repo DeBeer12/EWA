@@ -29,13 +29,12 @@ nav {
     align-items: center;
     text-decoration: none;
     transition: all .2s;
-    padding: 10px 0;
+    padding: 0px 0;
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-
-      .link-text {
-        margin-right: 25px;
+    &:hover{
+      background-color: rgba(255,255,255,0.1);
+      .link-text{
+        margin-right: 10px;
         // color: rgb(210, 210, 210)
       }
 

@@ -1,7 +1,5 @@
-<div class="cont">
-
-
-<div style="width: 200px; height: 200px; display: block; background-color:red;" (click)="toggleNav()">
-</div>
-
+<div (click)="toggleNav()" class="cont">
+    <div class="outer-burger">
+        <div class="hamburger" [ngClass]="{'active': navExtended}"></div>
+    </div>
 </div>
