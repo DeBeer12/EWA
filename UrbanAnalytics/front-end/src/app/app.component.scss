@@ -1,7 +1,14 @@
+@import "../styles.scss";
+
 .container {
   display: grid;
   grid-template-columns: 60px calc(100% - 60px);
-  grid-template-rows: 8% 92%;
+
+  @include for-phone-only {
+    grid-template-columns: 0px 100%;
+  }
+
+  grid-template-rows: 60px calc(100% - 60px);
   grid-template-areas: "app-header app-header""app-nav router-outlet";
   grid-gap: 0;
 
