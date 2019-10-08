@@ -88,7 +88,18 @@
   .groupList {
     grid-area: groupList;
     margin: 5% 0 5% 7%;
+    font-size: 32px;
+    td{
+      border-bottom: 1px groove white;
+    }
+
+    .groupListStyle {
+      tr:hover {
+        color: darkgrey
+      }
+    }
   }
+
 
   // Style all divs in container
   .groupDetails,
@@ -100,9 +111,10 @@
     box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.12);
 
     h1 {
-      font-size: 1.3rem;
+      font-size: 2.3rem;
       margin-bottom: 5px;
       font-weight: 100;
     }
+
   }
 }
