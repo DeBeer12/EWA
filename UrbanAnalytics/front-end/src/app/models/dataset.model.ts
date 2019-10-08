@@ -5,9 +5,9 @@ import {Injectable} from "@angular/core";
 })
 
 export class DatasetModelComponent {
-  public name: string;
-  public summary: string;
-  public sort: number;
+  private name: string;
+  private summary: string;
+  private sort: number;
 
   constructor(
     name: string,
