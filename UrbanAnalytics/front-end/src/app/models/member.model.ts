@@ -5,8 +5,8 @@ import {Injectable} from "@angular/core";
 })
 
 export class MemberListModelComponent {
-  public image: string;
-  public name: string;
+  private image: string;
+  private name: string;
 
   constructor(
     image: string,
