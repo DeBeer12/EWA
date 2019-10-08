@@ -7,11 +7,13 @@
       <!-- Insert group list here -->
 
       <!-- Temporary test -->
-      <table>
-        <tr *ngFor="let group of this.userService.getGroupDetails()" (click)="this.selectedGroup = group">
-          <td>{{group.groupName}}</td>
-        </tr>
-      </table>
+      <div class="groupListStyle">
+        <table>
+          <tr *ngFor="let group of this.userService.getGroupDetails()" (click)="this.selectedGroup = group">
+            <td>{{group.groupName}}</td>
+          </tr>
+        </table>
+      </div>
 
     </div>
   </div>

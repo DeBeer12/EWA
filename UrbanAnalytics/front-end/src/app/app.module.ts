@@ -23,7 +23,10 @@ import { SingleDatasetComponent } from './my-datasets/single-dataset/single-data
 import { UploadDatasetComponent } from './my-datasets/upload-dataset/upload-dataset.component';
 import { ErrorComponent } from './error/error.component';
 import { ErrorRouteComponent } from './error/error-route/error-route.component';
+import { GroupMembersComponent } from './my-groups/single-group/group-members/group-members.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
+import {MemberListModelComponent} from "./models/member.model";
 
 const routes: Routes = [
   // Landing route
@@ -87,7 +90,8 @@ const routes: Routes = [
 
     // Error components
     ErrorComponent,
-    ErrorRouteComponent
+    ErrorRouteComponent,
+    GroupMembersComponent
   ],
   imports: [
     FormsModule,
@@ -96,10 +100,8 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
-  bootstrap: [AppComponent],
-  schemas: [
-  ]
+  providers: [MemberListModelComponent],
+  bootstrap: [AppComponent]
 })
 
 export class AppModule { }

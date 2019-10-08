@@ -56,6 +56,16 @@
   .groupList {
     grid-area: groupList;
     margin: 5% 0 5% 7%;
+    font-size: 32px;
+    td{
+      border-bottom: 1px groove white;
+    }
+
+    .groupListStyle {
+      tr:hover {
+        color: darkgrey
+      }
+    }
   }
 
   //Change grid if device is a phone
