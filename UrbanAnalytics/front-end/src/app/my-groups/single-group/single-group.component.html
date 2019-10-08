@@ -1,12 +1,12 @@
 <div class="cont">
 
-  <div class="groupName">
+  <div class="groupName contentContainer">
     <!-- Back button -->
-    <h1>{{this.selectedGroup.groupName}}</h1>
+    <h1>Group: {{this.selectedGroup.groupName}}</h1>
     <!-- Edit button for admin? -->
   </div>
 
-  <div class="datasetDetails">
+  <div class="datasetDetails contentContainer">
     <h1>Dataset details</h1>
     <hr>
     <!-- Dataset details here -->
@@ -28,7 +28,7 @@
     </div>
   </div>
 
-  <div class="datasetList">
+  <div class="datasetList contentContainer">
     <h1>Dataset list</h1>
     <hr>
 
@@ -45,11 +45,12 @@
 
   </div>
 
-  <div class="groupMembers">
+  <div class="groupMembers contentContainer">
     <h1>Group members</h1>
     <hr>
     <div class="groupMemberContent">
       <!-- Group members list here (Add, Delete Update ?) -->
+    <app-group-members></app-group-members>
     </div>
   </div>
 </div>

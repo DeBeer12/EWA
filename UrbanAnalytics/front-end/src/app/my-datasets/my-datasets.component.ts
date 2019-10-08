@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DatasetModelComponent} from "../models/dataset.model";
+import {DatasetService} from "../services/dataset/dataset.service";
 
 @Component({
   selector: 'app-my-datasets',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-datasets.component.scss']
 })
 export class MyDatasetsComponent implements OnInit {
+datasets = [];
+  groups: any;
 
-  constructor() { }
+  constructor(private datasetService: DatasetService) {
+    this.datasets = datasetService.getMyItems();
+  }
 
   ngOnInit() {
   }

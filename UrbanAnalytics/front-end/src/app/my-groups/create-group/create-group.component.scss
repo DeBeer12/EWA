@@ -1,0 +1,80 @@
+.cont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(#000000, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .popupContainer {
+    background: linear-gradient(to bottom, #242b3f 0%, #1f1f20 100%);
+    width: 35%;
+    height: 50%;
+    border-radius: .5rem;
+    padding: 2rem;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.12);
+
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #7345b6;
+    }
+
+    h1 {
+      text-align: center;
+      padding: .5rem;
+      font-size: 1.5rem;
+    }
+
+    .popupContent {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 79%;
+
+      table {
+        width: 100%;
+
+        td {
+          text-align: center;
+          font-size: 1.1rem;
+          padding: .5rem;
+
+          input {
+            width: 100%;
+            padding: .5rem;
+            background: rgba(0, 0, 0, 0);
+            border: solid 1px white;
+            border-radius: .3rem;
+            color: white;
+            text-align: center;
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .userSelector {
+        width: 96%;
+      }
+    }
+
+    .buttonRow {
+      display: flex;
+      justify-content: space-between;
+      justify-self: flex-end;
+
+      button {
+        width: 45%;
+      }
+    }
+  }
+}

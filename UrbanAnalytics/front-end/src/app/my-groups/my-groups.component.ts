@@ -8,9 +8,14 @@ import { UserService } from '../services/user/user.service';
 })
 export class MyGroupsComponent implements OnInit {
   selectedGroup: {} = this.userService.getGroupDetails()[1];
+  createGroupPopup: boolean = false;
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
+  }
+
+  toggleGroupPopup = () => {
+    this.createGroupPopup = !this.createGroupPopup;
   }
 }

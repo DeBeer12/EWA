@@ -1,22 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* Global imports */
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  height: 100vh;
-  font-family: 'Nunito Sans', sans-serif;
-  color: white;
-}
+/* Color pallet */
 
 $color-primary: white;
 $color-secondary: #c05e2c;
 $color-tertiary: white;
 $color-quaternary:white;
+
+/* SCSS Media queries */
 
 @mixin for-phone-only {
   @media (max-width: 599px) {
@@ -46,4 +40,44 @@ $color-quaternary:white;
   @media (min-width: 1800px) {
     @content;
   }
+}
+
+
+/* Global CSS Snippets */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Nunito Sans', sans-serif;
+  color: white;
+}
+
+.contentContainer {
+  background-color: rgba(138, 138, 138, 0.1);
+  border-radius: .5rem;
+  padding: 2rem;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.12);
+
+  h1:first-child {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    font-weight: 100;
+  }
+
+  /*     hr {
+      border-color: #bf5e2e; ?
+    } */
+}
+
+.button {
+  height: 2.5rem;
+  background-color: #7245b8;
+  border: none;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.2);
+  border-radius: .5rem;
+  color: white;
 }

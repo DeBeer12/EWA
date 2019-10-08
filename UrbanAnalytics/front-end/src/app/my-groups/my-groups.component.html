@@ -1,22 +1,24 @@
 <div class="cont">
 
-  <div class="groupList">
+  <div class="groupList contentContainer">
     <h1>Group list</h1>
     <hr>
     <div>
       <!-- Insert group list here -->
 
       <!-- Temporary test -->
-      <table>
-        <tr *ngFor="let group of this.userService.getGroupDetails()" (click)="this.selectedGroup = group">
-          <td>{{group.groupName}}</td>
-        </tr>
-      </table>
+      <div class="groupListStyle">
+        <table>
+          <tr *ngFor="let group of this.userService.getGroupDetails()" (click)="this.selectedGroup = group">
+            <td>{{group.groupName}}</td>
+          </tr>
+        </table>
+      </div>
 
     </div>
   </div>
 
-  <div class="groupDetails">
+  <div class="groupDetails contentContainer">
     <h1>Group details</h1>
     <hr>
     <div class="groupDetailsContent">
@@ -42,19 +44,20 @@
       </table>
 
       <!-- Give routerLink a route param to give selected value -->
-      <button routerLink="/groups/single/">Go to group</button>
+      <button routerLink="/groups/single/" class="button">Go to group</button>
 
     </div>
   </div>
 
-  <div class="createGroup">
+  <div class="createGroup contentContainer">
     <h1>New group</h1>
     <hr>
     <div class="createGroupContent">
       <!-- Insert new group here -->
+      <app-create-group *ngIf="this.createGroupPopup" (exit)="this.toggleGroupPopup()"></app-create-group>
 
-
-      <button>Create new group</button>
+      <button (click)="this.toggleGroupPopup()" class="button">Create new group</button>
     </div>
   </div>
+
 </div>

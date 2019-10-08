@@ -74,6 +74,60 @@ export class UserService {
         ]
       },
     ];
+
+  Allmembers: {
+    firstname: string, lastname: string, email: string
+  }[] = [
+      {
+        firstname: "Hans",
+        lastname: "Anders",
+        email: "HansAnders@gmail.com",
+      },
+      {
+        firstname: "Niels",
+        lastname: "van Oeffel",
+        email: "niels@gmail.com",
+      },
+      {
+        firstname: "Jerry",
+        lastname: "Geerts",
+        email: "jerry@gmail.com",
+      },
+      {
+        firstname: "Danny",
+        lastname: "Huigen",
+        email: "danny@gmail.com",
+      },
+      {
+        firstname: "Bob",
+        lastname: "Broersen",
+        email: "bob@gmail.com",
+      }, {
+        firstname: "Hans",
+        lastname: "Anders",
+        email: "HansAnders@gmail.com",
+      },
+      {
+        firstname: "Niels",
+        lastname: "van Oeffel",
+        email: "niels@gmail.com",
+      },
+      {
+        firstname: "Jerry",
+        lastname: "Geerts",
+        email: "jerry@gmail.com",
+      },
+      {
+        firstname: "Danny",
+        lastname: "Huigen",
+        email: "danny@gmail.com",
+      },
+      {
+        firstname: "Bob",
+        lastname: "Broersen",
+        email: "bob@gmail.com",
+      }
+    ]
   constructor() { }
 
   getUserDetails = () => {

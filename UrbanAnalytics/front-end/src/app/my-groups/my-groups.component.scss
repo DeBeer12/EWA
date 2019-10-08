@@ -11,25 +11,6 @@
 
   height: 100%;
 
-  //Change grid if device is a phone
-  @include for-phone-only {
-    grid-template-columns: 100fr;
-    grid-template-rows: 50fr 50fr 50fr;
-    grid-template-areas: "groupList""groupDetails""createGroup";
-
-    .createGroup {
-      margin: 0 7% 0 7%;
-    }
-
-    .groupDetails {
-      margin: 0 7% 0 7%;
-    }
-
-    .groupList {
-      margin: 7% 7% 0 7%;
-    }
-  }
-
   // Group details component
   .groupDetails {
     grid-area: groupDetails;
@@ -46,13 +27,6 @@
         bottom: 2rem;
         align-self: center;
         width: 60%;
-        height: 2.5rem;
-        background-color: #7245b8;
-        border: none;
-        border-radius: .5rem;
-        color: white;
-        box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.2);
-
       }
 
       table {
@@ -74,12 +48,6 @@
 
       button {
         width: 60%;
-        height: 2.5rem;
-        background-color: #7245b8;
-        border: none;
-        box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.2);
-        border-radius: .5rem;
-        color: white;
       }
     }
   }
@@ -88,21 +56,35 @@
   .groupList {
     grid-area: groupList;
     margin: 5% 0 5% 7%;
+    font-size: 32px;
+    td{
+      border-bottom: 1px groove white;
+    }
+
+    .groupListStyle {
+      tr:hover {
+        color: darkgrey
+      }
+    }
   }
 
-  // Style all divs in container
-  .groupDetails,
-  .createGroup,
-  .groupList {
-    background-color: rgba(138, 138, 138, 0.1);
-    border-radius: .5rem;
-    padding: 2rem;
-    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.12);
+  //Change grid if device is a phone
+  @include for-phone-only {
+    grid-template-columns: 100fr;
+    grid-template-rows: 75fr 75fr 75fr;
+    grid-template-areas: "groupList""groupDetails""createGroup";
+    height: auto;
 
-    h1 {
-      font-size: 1.3rem;
-      margin-bottom: 5px;
-      font-weight: 100;
+    .createGroup {
+      margin: 0 7% 0 7%;
+    }
+
+    .groupDetails {
+      margin: 0 7% 0 7%;
+    }
+
+    .groupList {
+      margin: 7% 7% 0 7%;
     }
   }
 }
