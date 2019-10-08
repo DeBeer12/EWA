@@ -1,1 +1,66 @@
-<p>my-account works!</p>
+<div class="grid-container">
+
+  <div class="profile">
+
+    <div class="form-cont contentContainer">
+      <div class="edit-toggle">
+        <ng-switchery [(ngModel)]="truthyValue" onLabel="edit" color="orange"></ng-switchery>
+
+      </div>
+      <form action="">
+
+        <div>
+          <div id="pf">
+            <div>
+              <img src="http://celebsiren.com/wp-content/uploads/2019/03/ALEx-ernst-300x300.jpg" alt="`profile pic">
+              <div>
+                <span class="fa fa-phone"></span>
+                <p>06-12345678</p>
+              </div>
+              <div>
+                <span class="fa fa-envelope"></span>
+                <p>alex.ernst@sweden.se</p>
+              </div>
+              <div>
+                <span class="fa fa-globe"></span>
+                <p>aernst.se</p>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="inputs">
+            <div>
+              <input disabled value="Alex Ernst" type="text">
+
+              <div id="location">
+                <span class="fa fa-map-marker"></span>
+                <p> Amsterdam, The Netherlands</p>
+              </div>
+
+            </div>
+            <div id="company">
+              <input disabled value="Sweden Analytics" type="text">
+            </div>
+            <div id="job-desc">
+              <input disabled value="Junior Data Analist" type="text">
+            </div>
+
+            <div id="desc">
+              <div>
+                <label for="">About me</label>
+                <p>I like to play squash with my mates and beside that I have a big obsession with collection and
+                  analysing data about power sources throughout europe
+                  Chillwave whatever 90's vexillologist bitters, asymmetrical kale chips enamel pin deserunt lorem pug
+                  vape echo park migas. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="invites">
+    <app-invites></app-invites>
+  </div>
+</div>

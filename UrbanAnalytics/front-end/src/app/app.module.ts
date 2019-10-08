@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
+import { NgSwitcheryModule } from "angular-switchery-ios";
+
 import { Routes, RouterModule } from "@angular/router";
 
 import { AppComponent } from './app.component';
@@ -26,7 +28,7 @@ import { ErrorRouteComponent } from './error/error-route/error-route.component';
 import { GroupMembersComponent } from './my-groups/single-group/group-members/group-members.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import {MemberListModelComponent} from "./models/member.model";
+import { MemberListModelComponent } from "./models/member.model";
 
 const routes: Routes = [
   // Landing route
@@ -98,6 +100,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     NgMultiSelectDropDownModule.forRoot(),
     BrowserModule,
+    NgSwitcheryModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
