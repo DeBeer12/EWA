@@ -100,7 +100,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [MemberListModelComponent],
+  providers: [],
   bootstrap: [AppComponent]
 })
 
