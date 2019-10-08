@@ -29,8 +29,13 @@
       </div>
     </div>
   </div>-->
-  <div *ngFor="let dataset of groupDatasets">
-    <p>{{dataset.name}}</p>
-    <p>{{dataset.summary}}</p>
+  <div class="groupdatasets">
+    <div *ngFor="let group of mygroups">
+      <h1>{{group.getName()}}</h1>
+      <div *ngFor="let dataset of group">
+        <p>{{dataset.name}}</p>
+        <p>{{dataset.summary}}</p>
+      </div>
+    </div>
   </div>
 </div>
