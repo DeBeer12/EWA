@@ -2,4 +2,12 @@
   <div class="outer-burger" (click)="toggleNav()">
     <div class="hamburger" [ngClass]="{'active': navExtended}"></div>
   </div>
+  <div class="content-wrapper">
+    <div class="logo-text-wrapper">
+      <h1>Urban analytics</h1>
+    </div>
+    <div class="account-text-wrapper">
+      <a routerLink="/login">login</a><span> / </span><a routerLink="/register">register</a>
+    </div>
+  </div>
 </div>
