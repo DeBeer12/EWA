@@ -2,4 +2,58 @@
   margin: 50px 46px 46px 0px;
   position: relative;
 
+  ul {
+    margin-top: 15px;
+
+    li {
+      list-style: none;
+
+      .invite {
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column; //Twijfel nog over row of column
+
+        .img-text {
+          display: flex;
+          flex-direction: row;
+
+
+          img {
+            height: 63px;
+            width: 63px;
+            border-radius: 500px;
+
+          }
+
+          div {
+            margin-left: 18px;
+
+            .date {
+              font-size: 12px;
+              color: #bbb;
+            }
+          }
+        }
+
+
+        .buttons {
+          display: flex;
+          justify-content: flex-end;
+
+          p {
+            border-radius: 5px;
+            border: 1px solid;
+            color: white;
+            margin: 9px 11px;
+            padding: 7px 26px;
+          }
+
+          .accept {}
+
+          .decline {}
+        }
+      }
+    }
+  }
 }
