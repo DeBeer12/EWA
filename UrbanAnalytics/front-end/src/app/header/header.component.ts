@@ -8,15 +8,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input() navExtended: boolean;
-  @Output() changeNav: EventEmitter<boolean> = new EventEmitter<boolean>()
+  @Output() changeNav: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
 
   ngOnInit() {
   }
-  
-  toggleNav(){
+
+  toggleNav() {
     this.navExtended = !this.navExtended;
-    this.changeNav.emit(this.navExtended)
+    this.changeNav.emit(this.navExtended);
   }
 }

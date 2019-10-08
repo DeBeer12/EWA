@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 import { Routes, RouterModule } from "@angular/router";
 
@@ -22,6 +23,7 @@ import { SingleDatasetComponent } from './my-datasets/single-dataset/single-data
 import { UploadDatasetComponent } from './my-datasets/upload-dataset/upload-dataset.component';
 import { ErrorComponent } from './error/error.component';
 import { ErrorRouteComponent } from './error/error-route/error-route.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   // Landing route
@@ -88,11 +90,16 @@ const routes: Routes = [
     ErrorRouteComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    NgMultiSelectDropDownModule.forRoot(),
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+  ]
 })
 
 export class AppModule { }
