@@ -9,13 +9,7 @@ import { UserService } from './services/user/user.service';
 })
 export class AppComponent {
   title = 'UrbanAnalytics';
-  navExtended: boolean = false;
-
   constructor(private userService: UserService) { }
-
-  changeNav = (event) => {
-    this.navExtended = event;
-  }
 }
 
 

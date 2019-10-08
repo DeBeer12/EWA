@@ -1,22 +1,27 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { NavbarService } from '../services/navbar/navbar.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent{
 
-  @Input() navExtended: boolean;
-  @Output() changeNav: EventEmitter<boolean> = new EventEmitter<boolean>()
+  navExtended: boolean;
 
-  constructor() { }
+  constructor(
+    private navBarService : NavbarService
+  ) { 
 
-  ngOnInit() {
+    this.navBarService.getIsExtended().subscribe(val =>{
+      this.navExtended = val;
+    });
+
   }
-  
+
+
   toggleNav(){
-    this.navExtended = !this.navExtended;
-    this.changeNav.emit(this.navExtended)
+    this.navBarService.toggleNavBar();
   }
 }

@@ -1,26 +1,12 @@
 <nav [ngClass]="{'active': navExtended}">
-  <!-- 
-    <span *ngIf="navExtended" > omg hi</span> -->
-
   <ul>
-    <li><a routerLink="/dashboard">
-        <span class="link-text">Home</span>
+    <li *ngFor="let navBarRoute of navBarRoutes">
+      <a [routerLink]="[navBarRoute.link]" [ngClass]="{'active': navBarRoute.link == currentParentUrl}">
+        <span class="link-text">{{navBarRoute.text}}</span>
         <div class="icon">
-          <i class="fa fa-3x fa-home medium"></i>
+          <i [ngClass]="[navBarRoute.iconClasses]"></i>
         </div>
-      </a></li>
-    <li><a routerLink="/datasets">
-        <span class="link-text">Data sets</span>
-        <div class="icon">
-          <i class="fa fa-3x fa-bar-chart small"></i>
-        </div>
-      </a></li>
-    <li><a routerLink="/groups">
-        <span class="link-text">Groups</span>
-        <div class="icon">
-          <i class="fa fa-3x fa-users small"></i>
-        </div>
-      </a></li>
+      </a>
+    </li>
   </ul>
-
 </nav>

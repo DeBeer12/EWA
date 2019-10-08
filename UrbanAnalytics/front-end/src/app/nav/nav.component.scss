@@ -31,9 +31,10 @@ nav {
     transition: all .2s;
     padding: 0px 0;
 
-    &:hover{
-      background-color: rgba(255,255,255,0.1);
-      .link-text{
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+
+      .link-text {
         margin-right: 10px;
         // color: rgb(210, 210, 210)
       }
@@ -45,6 +46,26 @@ nav {
 
         &.medium {
           transform: scale(0.9);
+        }
+      }
+    }
+
+    &.active {
+      background-color: rgba(0, 0, 0, 0.4);
+      opacity: .6;
+
+      .link-text {
+        margin-right: 10px;
+        // color: rgb(210, 210, 210)
+      }
+
+      .icon i {
+        &.small {
+          transform: scale(0.7);
+        }
+
+        &.medium {
+          transform: scale(0.8);
         }
       }
     }
@@ -71,6 +92,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     i {
       color: white;
