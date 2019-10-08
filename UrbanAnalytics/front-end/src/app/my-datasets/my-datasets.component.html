@@ -1,28 +1,36 @@
 <div class="datasets">
   <h1>National</h1>
-  <div class="national" *ngFor="let dataset of datasets">
+  <div class="national" *ngFor="let dataset of allDatasets">
     <div *ngIf="dataset.sort == 1">
       <p>{{dataset.name}}</p>
       <p class="summary">{{dataset.summary}}</p>
     </div>
   </div>
   <h1>EU</h1>
-  <div class="Eu" *ngFor="let dataset of datasets">
+  <div class="Eu" *ngFor="let dataset of allDatasets">
     <div *ngIf="dataset.sort == 0">
       <p>{{dataset.name}}</p>
       <p class="summary">{{dataset.summary}}</p>
     </div>
   </div>
   <h1>Region</h1>
-  <div class="region" *ngFor="let dataset of datasets">
+  <div class="region" *ngFor="let dataset of allDatasets">
     <div *ngIf="dataset.sort == 2">
       <p>{{dataset.name}}</p>
       <p class="summary">{{dataset.summary}}</p>
     </div>
   </div>
   <!--Every group has his own sorting number, so first you need to check if in which groups you are, then you count those numbers, ngif those-->
-  <div class="groups" *ngFor="let group of groups">
-    <!--ngIf(group.sort == -->
+  <!--<div class="groups" *ngFor="let group of allgroups; let mygroup of mygroups; let dataset of allDatasets">
+    <div class="" *ngIf="group.sort == mygroup.sort ">
+      <div *ngIf="dataset.sort">
+        <p>aksfj</p>
+        <p class="summary"></p>
+      </div>
+    </div>
+  </div>-->
+  <div *ngFor="let dataset of groupDatasets">
+    <p>{{dataset.name}}</p>
+    <p>{{dataset.summary}}</p>
   </div>
-
 </div>

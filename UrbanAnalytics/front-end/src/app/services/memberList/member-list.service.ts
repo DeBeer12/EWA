@@ -4,12 +4,12 @@ import {MemberListModelComponent} from "../../models/member.model";
 @Injectable({
   providedIn: 'root'
 })
+
 export class MemberListService {
 
   constructor() { }
   public members = [
-    new MemberListModelComponent('../assets/img/no_profile.png',
-      'Hans Weber'),
+    new MemberListModelComponent('../assets/img/no_profile.png', 'Hans Weber'),
     new MemberListModelComponent('../assets/img/no_profile.png', 'Darth Vader')
   ];
 

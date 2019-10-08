@@ -4,15 +4,19 @@ import {Injectable} from "@angular/core";
   providedIn: 'root'
 })
 
-export class MemberListModelComponent {
-  private image: string;
+export class MyGroupsModelComponent {
+  private sort: number;
   private name: string;
 
   constructor(
-    image: string,
+    sort: number,
     name: string
   ) {
-    this.image = image;
+    this.sort = sort;
     this.name = name;
+  }
+
+  public getSort() {
+    return this.sort;
   }
 }
