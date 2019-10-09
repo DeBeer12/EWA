@@ -1,57 +1,110 @@
 .contentContainer {
   margin: 50px 46px 46px 0px;
   position: relative;
+  height: 80%;
 
-  ul {
-    margin-top: 15px;
+  .list {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 40rem;
 
-    li {
-      list-style: none;
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
 
-      .invite {
-        height: fit-content;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column; //Twijfel nog over row of column
+    &::-webkit-scrollbar-thumb {
+      background: #7345b6;
+    }
 
-        .img-text {
+
+    ul {
+      margin-top: 15px;
+
+      li {
+        margin: 20px 0;
+        list-style: none;
+
+
+        .invite {
+          height: fit-content;
           display: flex;
-          flex-direction: row;
+          justify-content: space-between;
+          flex-direction: column; //Twijfel nog over row of column
 
-
-          img {
-            height: 63px;
-            width: 63px;
-            border-radius: 500px;
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            filter: blur(1px);
+            background-color: hsl(222, 16%, 16%);
 
           }
 
-          div {
-            margin-left: 18px;
 
-            .date {
-              font-size: 12px;
-              color: #bbb;
+          .img-text {
+            display: flex;
+            flex-direction: row;
+
+
+            img {
+              height: 63px;
+              width: 63px;
+              border-radius: 500px;
+              max-height: 63px;
+
+            }
+
+            div {
+              margin-left: 18px;
+              width: 23rem;
+
+              .date {
+                font-size: 12px;
+                color: #bbb;
+              }
             }
           }
-        }
 
 
-        .buttons {
-          display: flex;
-          justify-content: flex-end;
+          .buttons {
+            display: flex;
+            justify-content: flex-end;
 
-          p {
-            border-radius: 5px;
-            border: 1px solid;
-            color: white;
-            margin: 9px 11px;
-            padding: 7px 26px;
+            margin-top: -9px;
+
+            a {
+              text-decoration: none;
+            }
+
+            p {
+              border-radius: 5px;
+              border: 1px solid;
+              color: white;
+              margin: 9px 11px;
+              padding: 7px 26px;
+              transition: all .2s ease-in-out;
+            }
+
+            .accept {
+
+              background: #7346b7;
+              border: 1px solid #ffffff99 !important;
+
+
+              &:hover {
+                background: #513181;
+              }
+            }
+
+            .decline {
+              color: rgb(148, 148, 148);
+
+              &:hover {
+                background-color: white;
+              }
+            }
           }
-
-          .accept {}
-
-          .decline {}
         }
       }
     }
