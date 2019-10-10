@@ -12,22 +12,17 @@
 
   .popupContainer {
     background: linear-gradient(to bottom, #242b3f 0%, #1f1f20 100%);
-    width: 35%;
-    height: 50%;
+    width: 45%;
+    height: 80%;
     border-radius: .5rem;
     padding: 2rem;
     box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.12);
 
-    scroll-behavior: smooth;
-    overflow-y: scroll;
+    overflow-y: hidden;
 
-    &::-webkit-scrollbar {
-      width: 7px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: #7345b6;
-    }
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 
     h1 {
       text-align: center;
@@ -39,7 +34,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      height: 79%;
+      height: 70%;
 
       table {
         width: 100%;
@@ -58,6 +53,10 @@
             color: white;
             text-align: center;
             font-size: 1.2rem;
+
+            &:focus {
+              outline: none;
+            }
           }
         }
       }
@@ -76,5 +75,11 @@
         width: 45%;
       }
     }
+  }
+}
+
+:host {
+  .selected-item {
+    background-color: #000000;
   }
 }

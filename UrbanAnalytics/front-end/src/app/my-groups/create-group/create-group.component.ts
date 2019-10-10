@@ -28,6 +28,7 @@ export class CreateGroupComponent implements OnInit {
       textField: 'item_text',
       selectAllText: 'Select All',
       unSelectAllText: 'Unselect All',
+      itemsShowLimit: 7,
       allowSearchFilter: true
     };
   }
@@ -45,5 +46,8 @@ export class CreateGroupComponent implements OnInit {
     if (event.target.className === "cont" || event.target.className === "cancelButton button") {
       this.exit.emit();
     }
+  }
+
+  createGroup = (event) => {
   }
 }

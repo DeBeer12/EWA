@@ -1,29 +1,32 @@
 <div class="cont" (click)="this.exitPopup($event)">
   <div class="popupContainer">
-    <h1>Create new group</h1>
-    <hr>
+    <div class="popupHeader">
+      <h1>Create new group</h1>
+      <hr>
+    </div>
 
     <div class="popupContent">
-      <table>
-        <tr>
-          <td><label for="groupName">Group name:</label></td>
-        </tr>
-        <tr>
-          <td><input type="text" id="groupName"></td>
-        </tr>
-        <tr>
-          <td><label for="userSelector">Group members:</label></td>
-        </tr>
-        <tr>
-          <td>
-            <ng-multiselect-dropdown id="userSelector" class="userSelector"
-              [placeholder]="'Select members you would like to add'" [data]="dropdownList" [(ngModel)]="selectedItems"
-              [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
-            </ng-multiselect-dropdown>
-          </td>
-        </tr>
-      </table>
-
+      <form autocomplete="off">
+        <table>
+          <tr>
+            <td><label for="groupName">Group name:</label></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="groupName"></td>
+          </tr>
+          <tr>
+            <td><label for="userSelector">Group members:</label></td>
+          </tr>
+          <tr>
+            <td>
+              <ng-multiselect-dropdown id="userSelector" class="userSelector"
+                [placeholder]="'Select members you would like to add'" [data]="dropdownList" [(ngModel)]="selectedItems"
+                [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+              </ng-multiselect-dropdown>
+            </td>
+          </tr>
+        </table>
+      </form>
     </div>
 
     <div class="buttonRow">

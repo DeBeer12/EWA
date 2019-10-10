@@ -48,6 +48,15 @@ $color-quaternary:white;
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #7345b6;
+  }
 }
 
 body {
@@ -56,6 +65,7 @@ body {
   color: white;
 }
 
+/* For every content container */
 .contentContainer {
   background-color: rgba(138, 138, 138, 0.1);
   border-radius: .5rem;
@@ -73,6 +83,7 @@ body {
     } */
 }
 
+/* Default button look */
 .button {
   height: 2.5rem;
   background-color: #7245b8;
@@ -80,4 +91,55 @@ body {
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.2);
   border-radius: .5rem;
   color: white;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Multi-value selectbox lib overwrite default styles*/
+.multiselect-dropdown {
+  box-shadow: none !important;
+
+  .selected-item {
+    background-color: #7245b8 !important;
+    border: none !important;
+    border-radius: .4rem !important;
+    margin: 0.2rem !important;
+    padding: .1rem .3rem .1rem .3rem !important;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .dropdown-list {
+    background-color: rgb(35, 40, 51) !important;
+    box-shadow: none !important;
+
+    div {
+      color: white !important;
+
+      &:before {
+        background: none !important;
+        border-color: #7245b8 !important;
+      }
+    }
+
+    .filter-textbox input {
+      background: rgba(255, 255, 255, 0.1);
+      border: solid 1px white;
+      border-radius: .3rem;
+      height: 2rem;
+      color: white;
+      font-size: 1rem;
+    }
+  }
+
+  .dropdown-btn:focus {
+    outline: none !important;
+  }
+
+  .item2 {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+  }
 }
