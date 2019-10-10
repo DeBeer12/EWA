@@ -1,3 +1,5 @@
+@import "../../../styles.scss";
+
 .cont {
   position: absolute;
   top: 0;
@@ -23,6 +25,11 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+
+    // Change css if device is a phone
+    @include for-phone-only {
+      width: 90%;
+    }
 
     h1 {
       text-align: center;
@@ -75,11 +82,5 @@
         width: 45%;
       }
     }
-  }
-}
-
-:host {
-  .selected-item {
-    background-color: #000000;
   }
 }

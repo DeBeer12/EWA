@@ -1,3 +1,5 @@
+@import "../../../styles.scss";
+
 .cont {
   // Grid settings
   display: grid;
@@ -32,5 +34,28 @@
   .groupMembers {
     grid-area: groupMembers;
     margin: 0 7% 5% 0;
+  }
+
+  @include for-phone-only {
+    grid-template-columns: 100fr;
+    grid-template-rows: 10fr 40fr 30fr 30fr;
+    grid-template-areas: "groupName""datasetList""datasetDetails""groupMembers";
+    height: auto;
+
+    .groupName {
+      margin: 7% 7% 0 7%;
+    }
+
+    .datasetList {
+      margin: 0 7% 0 7%;
+    }
+
+    .datasetDetails {
+      margin: 0 7% 0 7%;
+    }
+
+    .groupMembers {
+      margin: 0 7% 7% 7%;
+    }
   }
 }
