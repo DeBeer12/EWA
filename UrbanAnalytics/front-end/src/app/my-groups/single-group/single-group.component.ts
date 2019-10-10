@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user/user.service';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-single-group',
@@ -37,5 +37,6 @@ export class SingleGroupComponent implements OnInit {
     this.selectedDataset = this.selectedGroup.datasets[1];
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 }

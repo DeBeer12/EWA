@@ -36,8 +36,16 @@
       <!-- Dataset list here -->
 
       <!-- Temporary test -->
-      <table>
-        <tr *ngFor="let dataset of this.selectedGroup.datasets" (click)="this.selectedDataset = dataset">
+      <table class="dataSetTable">
+        <thead>
+          <tr>
+            <th class="primary-table-header">Name
+              <hr>
+            </th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let dataset of this.selectedGroup.datasets" (click)="this.selectedDataset = dataset">
           {{dataset.name}}
         </tr>
       </table>
