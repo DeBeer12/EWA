@@ -57,7 +57,8 @@
     grid-area: groupList;
     margin: 5% 0 5% 7%;
     font-size: 32px;
-    td{
+
+    td {
       border-bottom: 1px groove white;
     }
 
@@ -71,12 +72,12 @@
   //Change grid if device is a phone
   @include for-phone-only {
     grid-template-columns: 100fr;
-    grid-template-rows: 75fr 75fr 75fr;
+    grid-template-rows: 75fr 75fr 50fr;
     grid-template-areas: "groupList""groupDetails""createGroup";
-    height: auto;
+    height: 120%;
 
     .createGroup {
-      margin: 0 7% 0 7%;
+      margin: 0 7% 7% 7%;
     }
 
     .groupDetails {
