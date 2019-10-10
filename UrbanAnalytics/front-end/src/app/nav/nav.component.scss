@@ -1,5 +1,9 @@
 @import "../../styles.scss";
 
+app-nav {
+  z-index: 1;
+}
+
 nav {
   width: 200px;
   height: 100%;

@@ -11,8 +11,8 @@
   grid-template-rows: 60px calc(100% - 60px);
   grid-template-areas: "app-header app-header""app-nav router-outlet";
   grid-gap: 0;
-
   height: 100%;
+
 
   app-header {
     grid-area: app-header;
@@ -20,6 +20,7 @@
 
   app-nav {
     grid-area: app-nav;
+    z-index: 100;
   }
 
   .content {
