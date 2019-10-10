@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {DatasetModelComponent} from "../models/dataset.model";
-import {DatasetService} from "../services/dataset/dataset.service";
-import {MyGroupsService} from "../services/my-groups-for-datasetlist/my-groups.service";
-import {MyGroupsModelComponent} from "../models/my-groups.model";
-import {UserService} from "../services/user/user.service";
+import { Component, OnInit } from '@angular/core';
+import { DatasetModelComponent } from "../models/dataset.model";
+import { DatasetService } from "../services/dataset/dataset.service";
+import { MyGroupsService } from "../services/my-groups-for-datasetlist/my-groups.service";
+import { MyGroupsModelComponent } from "../models/my-groups.model";
+import { UserService } from "../services/user/user.service";
 
 @Component({
   selector: 'app-my-datasets',

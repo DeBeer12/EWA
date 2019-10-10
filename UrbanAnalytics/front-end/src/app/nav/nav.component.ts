@@ -15,7 +15,8 @@ export class NavComponent {
 
   //All the links in the navbar
   navBarRoutes = [
-    { "text": "Home", "link": "/dashboard", "iconClasses": "fa fa-3x fa-home medium" },
+    { "text": "Home", "link": "/", "iconClasses": "fa fa-3x fa-home medium" },
+    { "text": "Dashboard", "link": "/dashboard", "iconClasses": "fa fa-3x fa-paper-plane small" },
     { "text": "Datasets", "link": "/datasets", "iconClasses": "fa fa-3x fa-bar-chart small" },
     { "text": "Groups", "link": "/groups", "iconClasses": "fa fa-3x fa-users small" },
   ]
