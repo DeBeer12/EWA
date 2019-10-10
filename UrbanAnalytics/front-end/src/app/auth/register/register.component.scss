@@ -1,0 +1,53 @@
+.registerBox {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 100px 0 -150px;
+  background-image: linear-gradient(to bottom, grey);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.12);
+}
+
+h1 {
+  padding: 10px 20px 10px 25px;
+}
+
+input {
+  width: 280px;
+  height: 25px;
+  padding: 8px 5px 0 10px;
+  background: linear-gradient(#1f2124, #27292c);
+  border: 1px solid #222;
+  box-shadow: 0 1px 0 rgba(138, 138, 138, 0.1);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.signUpDiv {
+  display: flex;
+  justify-content: space-between;
+  justify-self: flex-end;
+  padding: 0 10px 0 50px;
+  button {
+    width: 200px;
+    height: 30px;
+    background-color: #7245b8;
+    color: white;
+    border: none;
+    border-radius: 12px;
+   
+  
+  }
+}
+//kleur van de knoppen
+//#7245b8;
+
+
+
+
+.noAccount {
+  padding: 10px 0 0 10px;
+}

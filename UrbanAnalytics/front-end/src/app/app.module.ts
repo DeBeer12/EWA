@@ -38,6 +38,8 @@ const routes: Routes = [
   { path: "auth/login", component: LoginComponent },
   { path: "auth/register", component: RegisterComponent },
   { path: "auth/forgot", component: AppComponent },
+  { path: "auth/reset", component: ResetPasswordComponent },
+
   // Dashboard route
   { path: "dashboard", component: DashboardComponent },
   // Group routes
