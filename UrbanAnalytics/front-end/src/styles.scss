@@ -36,6 +36,13 @@ $color-quaternary:white;
   }
 }
 
+@mixin for-accountPage-up {
+  @media (max-width: 1692px) {
+    @content;
+  }
+}
+
+
 @mixin for-big-desktop-up {
   @media (min-width: 1800px) {
     @content;

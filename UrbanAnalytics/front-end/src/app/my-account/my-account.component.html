@@ -2,7 +2,7 @@
 
   <div class="profile">
 
-    <div class="form-cont contentContainer">
+    <div data-wow-delay="0.5s" class="form-cont contentContainer wow animated infinite bounce delay-2s">
       <div class="edit-toggle">
         <ng-switchery [(ngModel)]="edit" onLabel="edit" color="orange"></ng-switchery>
 
@@ -12,18 +12,22 @@
         <div>
           <div id="pf">
             <div>
-              <img src="{{picUrl}}" alt="`profile pic">
+              <img src="{{picUrl}}" alt="profile pic">
               <div>
                 <span class="fa fa-phone"></span>
-                <p>{{ phoneNum }}</p>
+
+                <input [disabled]="edit" value="{{ phoneNum }}" type="tel" name="" id="">
               </div>
               <div>
                 <span class="fa fa-envelope"></span>
-                <p>{{ email }}</p>
+
+
+                <input [disabled]="edit" value="{{ email }}" type="email" name="" id="">
               </div>
               <div>
                 <span class="fa fa-globe"></span>
-                <p>{{website}}</p>
+
+                <input [disabled]="edit" value="{{website}}" type="url" name="" id="">
               </div>
 
             </div>
@@ -35,7 +39,7 @@
 
               <div id="location">
                 <span class="fa fa-map-marker"></span>
-                <p> {{loc}}</p>
+                <input [disabled]="edit" value="{{loc}}" type="text">
               </div>
 
             </div>
@@ -49,7 +53,8 @@
             <div id="desc">
               <div>
                 <label for="">About me</label>
-                <p>{{about}}</p>
+                <textarea [disabled]="edit" name="" id="" cols="30" rows="10">{{about}}
+                </textarea>
               </div>
             </div>
           </div>

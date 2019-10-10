@@ -1,3 +1,5 @@
+@import "../../styles.scss";
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -5,17 +7,30 @@
   grid-template-areas: "profile profile invites";
   height: 95%;
 
+  @include for-accountPage-up {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "profile"
+      "invites";
+
+  }
+
   .profile {
     grid-area: profile;
+    height: fit-content;
 
     .form-cont {
-
-
-      //   height: 96%;
-
+      width: fit-content;
       margin: 46px 65px 21px 64px;
-
       position: relative;
+
+      @include for-phone-only {
+        margin: 0;
+        width: 100%;
+        padding: 10px 0;
+      }
 
       hr {
         margin-top: 20px;
@@ -35,6 +50,10 @@
         div {
           display: flex;
 
+          @include for-phone-only {
+            flex-direction: column;
+          }
+
 
           #pf {
             height: 220px;
@@ -48,13 +67,40 @@
                 border-radius: 100%;
                 height: 100%;
                 width: 100%;
-                margin-bottom: 15px
+                margin-bottom: 15px;
+
+                @include for-phone-only {
+                  width: 120px;
+                  height: 120px;
+
+                }
+
+
               }
 
               div {
                 flex-direction: row;
                 justify-content: center;
                 margin: 2px 0;
+
+                input {
+                  height: fit-content;
+                  text-align: center;
+                  background-color: #00000054;
+                  color: white;
+                  border: none;
+                  border-radius: 6px;
+                  font-size: 14px;
+                  transition: all 0.3s ease-in-out;
+                }
+
+                input:disabled {
+                  text-align: center;
+                  background: none;
+                  color: white;
+                  border: none;
+                  font-size: 14px;
+                }
 
                 span {
                   margin-right: 5px;
@@ -72,9 +118,14 @@
               margin-top: 9px;
               color: gray;
 
-              p {
+              input {
                 margin-top: -2px;
-                margin-left: 6px;
+                margin-left: 18px;
+                font-size: 17px;
+
+                width: 250px;
+                color: gray;
+
               }
 
             }
@@ -99,14 +150,11 @@
             #desc {
               margin-top: 20px;
 
-              p {
-                width: 400px;
-                margin-top: 21px;
-                color: #bbb;
-              }
+
 
               div {
                 flex-direction: column;
+                width: 100%;
 
                 label {
                   font-size: 20px;
@@ -128,12 +176,38 @@
             input[type="text"] {
               height: fit-content;
               font-size: 32px;
+              background-color: #00000054;
+              font-size: 32px;
+              color: white;
+              border: none;
+              border-radius: 6px;
+              transition: all 0.3s ease-in-out;
             }
 
             input:disabled {
               background: none;
               color: white;
               border: none;
+
+            }
+
+            textarea {
+              font-family: "Nunito Sans", sans-serif;
+              font-size: 14px;
+              margin-top: 21px;
+              color: #bbb;
+              background-color: #00000054;
+              width: 24rem;
+              resize: none;
+              border: none;
+              border-radius: 6px;
+            }
+
+            textarea:disabled {
+              background: none;
+              border: none;
+
+
             }
           }
 
