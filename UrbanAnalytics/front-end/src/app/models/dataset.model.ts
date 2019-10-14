@@ -18,5 +18,7 @@ export class DatasetModelComponent {
     this.summary = summary;
     this.sort = sort;
   }
-
+  public getSort() {
+    return this.sort;
+  }
 }

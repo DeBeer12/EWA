@@ -5,18 +5,20 @@ import {DatasetModelComponent} from "../../models/dataset.model";
   providedIn: 'root'
 })
 export class DatasetService {
-  constructor() {}
+  constructor() {
+  }
 
   public datasets = [
-    new DatasetModelComponent('Zonnepanelen Nuon NL', 'Alle eneregie die opgewekt door zonnepanelen van Nuon in NL', 1),
-    new DatasetModelComponent('Zonnepanelen Nuon EU', 'Alle eneregie die opgewekt door zonnepanelen van Nuon in de EU', 0),
-    new DatasetModelComponent('Zonnepanelen Nuon Region', 'Alle eneregie die opgewekt door zonnepanelen van Nuon in Noord-Holland', 2),
-    new DatasetModelComponent('Zonnepanelen Nuon EU', 'Alle eneregie die opgewekt door zonnepanelen van Nuon in de EU', 0),
+    new DatasetModelComponent('Zonnepanelen Nuon NL', 'Alle energie die opgewekt wordt door zonnepanelen van Nuon in NL', 1),
+    new DatasetModelComponent('Zonnepanelen Nuon EU', 'Alle energie die opgewekt wordt door zonnepanelen van Nuon in de EU', 0),
+    new DatasetModelComponent('Zonnepanelen Nuon Region', 'Alle energie die opgewekt wordt door zonnepanelen van Nuon in Noord-Holland', 2),
+    new DatasetModelComponent('Zonnepanelen Nuon EU', 'Alle energie die opgewekt wordt door zonnepanelen van Nuon in de EU', 0),
   ];
 
   public getMyItems() {
     return this.datasets;
   }
-
-
+  public getSort(index: number){
+    this.datasets[index].getSort();
+  }
 }

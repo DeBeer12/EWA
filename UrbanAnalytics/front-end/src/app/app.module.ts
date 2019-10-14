@@ -29,6 +29,8 @@ import { GroupMembersComponent } from './my-groups/single-group/group-members/gr
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { MemberListModelComponent } from "./models/member.model";
+import {DatasetService} from "./services/dataset/dataset.service";
+import {MyGroupsService} from "./services/my-groups-for-datasetlist/my-groups.service";
 
 const routes: Routes = [
   // Landing route
@@ -103,9 +105,13 @@ const routes: Routes = [
     NgMultiSelectDropDownModule.forRoot(),
     BrowserModule,
     NgSwitcheryModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [
+    MyGroupsService,
+    DatasetService,
+    {provide: String, useValue: "'dummy"},
+    {provide: Number, useValue: "0"}],
   bootstrap: [AppComponent]
 })
 
