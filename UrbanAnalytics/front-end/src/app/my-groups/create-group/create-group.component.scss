@@ -81,7 +81,11 @@
       button {
         width: 45%;
         background-color: #7345b6;
-        
+
+      }
+      button:hover{
+        transition: 0.7s;
+        background-color: $color-secondary;
       }
     }
   }

@@ -28,6 +28,10 @@
         align-self: center;
         width: 60%;
       }
+      button:hover{
+        transition: 0.7s;
+        background-color: $color-secondary;
+      }
 
       table {
         margin: 2rem 0;
@@ -49,6 +53,10 @@
       button {
         width: 60%;
       }
+      button:hover{
+        transition: 0.7s;
+        background-color: $color-secondary;
+      }
     }
   }
 
@@ -56,15 +64,27 @@
   .groupList {
     grid-area: groupList;
     margin: 5% 0 5% 7%;
-    font-size: 32px;
+    font-size: 28px;
 
-    td {
-      border-bottom: 1px groove white;
+    table {
+      width: 100%;
+      background-color: linear-gradient(to bottom, #7245b8 0%, $color-secondary 100%);
+
+      td {
+        padding-top: 0.5%;
+        border-bottom: 1px groove white;
+      }
     }
 
     .groupListStyle {
       tr:hover {
-        color: darkgrey
+        transition: 0.2s;
+        color: #7245B8;
+        background-color: #353a47;
+      }
+      td:hover{
+        transition: 0.2s;
+        border-bottom: 1px groove white;
       }
     }
   }
