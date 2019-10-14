@@ -1,8 +1,8 @@
-.cont{
+.cont {
   color: rgba(231, 77, 224, 0.397);
 }
 
-.login{
+.login {
   position: absolute;
   width: 300px;
   height: 400px;
@@ -10,33 +10,47 @@
   top: 50%;
   left: 50%;
   margin: -100px 100px 0 -150px;
-  background-image: linear-gradient(to bottom , grey);
-  border-radius: .5rem;
+  // background-image: linear-gradient(to bottom, grey);
+  background-color:  rgba(138, 138, 138, 0.048);
+  border-radius: 0.5rem;
   box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.12);
 }
 
-h1{
+h1 {
   padding-left: 70px;
   padding-top: 30px;
 }
 
-p { margin: 20px 0 0; }
+p {
+  margin: 20px 0 0;
+  padding-left: 10px;
+}
 
-p { margin: 20px 0 0; }
-p:first-child { margin-top: 0; }
+p {
+  margin: 20px 0 0;
+}
+p:first-child {
+  margin-top: 0;
+}
 
-input[type=text], input[type=password] { 
-  width:280px;
-  padding:8px 5px 0 10px;
-  background:linear-gradient(#1f2124, #27292c);
-  border:1px solid #222;
-  box-shadow:
-    0 1px 0 rgba(255,255,255,0.1);
-  border-radius:12px;
-  margin-bottom:20px;
- }
+input[type="text"],
+input[type="password"] {
+  width: 280px;
+  padding: 8px 5px 5px 20px;
+  background: linear-gradient(#1f2124, #27292c);
+  border: 1px solid #222;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: white;
+  
+}
 
+//als de input iet valid is 
+input.ng-touched.ng-invalid{
 
+  border: 1px solid red;
+}
 
 p.remember_me {
   float: left;
@@ -56,16 +70,16 @@ p.remember_me {
     margin-right: 4px;
     vertical-align: middle;
   }
+  
 }
 
-
-input{
+input {
   border-radius: 40px;
   height: 40px;
 }
 
-form{
-  padding-top:50px; 
+form {
+  padding-top: 50px;
 }
 
 //button
@@ -78,10 +92,9 @@ form{
   button {
     width: 45%;
     height: 30px;
-    background-color: purple;
+    background-color: #7245b8;
     color: white;
     border: none;
     border-radius: 12px;
   }
 }
-    
