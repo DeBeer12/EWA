@@ -34,15 +34,23 @@
     .dataSetTable {
       margin-top: 10px;
       width: 100%;
-      background: linear-gradient(to bottom, #242b3f 0%, rgba(#c05e2c, 0.1));
+      height: 100%;
+      background-color: #202430;
       border-radius: 8px;
+      border-collapse:separate;
+      border-spacing:15px;
 
-      // Dataset table header
-      th{
+      .dataset{
+        margin: 5px;
+        transition-property: all;
+        transition-duration: 1.5s;
+      }
+
+      .dataset:hover{
+        margin: 20px;
         border-radius: 5px;
-        font-size: 17px;
-        text-align: left;
-        background-image: linear-gradient(to bottom, #242b3f, rgba(#c05e2c, 0.4));
+        color: #c05e2c;
+        cursor: pointer;
       }
     }
   }
