@@ -15,8 +15,8 @@ private allDatasets = [];
     this.allDatasets = allDatasets.getMyItems();
   }
 
-  groups = [new MyGroupsModelComponent(2, 'EWA'),
-    new MyGroupsModelComponent(0, 'Test'),
+  groups = [new MyGroupsModelComponent(3, 'EWA'),
+    new MyGroupsModelComponent(4, 'Test'),
   ];
 
   public getMyItems() {
