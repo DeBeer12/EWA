@@ -1,42 +1,36 @@
 <div class="datasets">
   <h1>National</h1>
+  <hr/>
   <div class="national" *ngFor="let dataset of allDatasets">
     <div *ngIf="dataset.sort == 1">
-      <p>{{dataset.name}}</p>
-      <p class="summary">{{dataset.summary}}</p>
+      <p class="dataset">{{dataset.name}}<br/>
+        <span class="summary">{{dataset.summary}}</span></p>
     </div>
   </div>
   <h1>EU</h1>
+  <hr/>
   <div class="Eu" *ngFor="let dataset of allDatasets">
     <div *ngIf="dataset.sort == 0">
-      <p>{{dataset.name}}</p>
-      <p class="summary">{{dataset.summary}}</p>
+      <p class="dataset">{{dataset.name}}<br/>
+        <span class="summary">{{dataset.summary}}</span></p>
     </div>
   </div>
   <h1>Region</h1>
+  <hr/>
   <div class="region" *ngFor="let dataset of allDatasets">
     <div *ngIf="dataset.sort == 2">
-      <p>{{dataset.name}}</p>
-      <p class="summary">{{dataset.summary}}</p>
+      <p class="dataset">{{dataset.name}}<br/>
+        <span class="summary">{{dataset.summary}}</span></p>
     </div>
   </div>
-  <!--Every group has his own sorting number, so first you need to check if in which groups you are, then you count those numbers, ngif those-->
-  <!--<div class="groups" *ngFor="let group of allgroups; let mygroup of mygroups; let dataset of allDatasets">
-    <div class="" *ngIf="group.sort == mygroup.sort ">
-      <div *ngIf="dataset.sort">
-        <p>aksfj</p>
-        <p class="summary"></p>
-      </div>
-    </div>
-  </div>-->
   <div class="groupdatasets">
-    <div *ngFor="let group of mygroups; let i; let dataset of groupDatasets">
-      {{i+1}}
+    <div *ngFor="let group of mygroups; let dataset of groupDatasets;" >
       <h1>{{group.getName()}}</h1>
+      <hr/>
       <div *ngFor="let dataset of allDatasets">
-      <div *ngIf="group.getSort() === dataset.getSort()">
-          <p>{{dataset.name}}</p>
-          <p class="summary">{{dataset.summary}}</p></div>
+        <div *ngIf="group.getSort() == dataset.getSort()">
+          <p class="dataset">{{dataset.name}}<br/>
+            <span class="summary">{{dataset.summary}}</span></p></div>
       </div>
     </div>
   </div>

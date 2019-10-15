@@ -1,21 +1,25 @@
 .datasets {
-  padding-left: 1%;
+  padding: 0 1.5% 1% 1.5%;
 
   h1 {
-    font-size: 50px;
+    font-size: 42px;
     display: flex;
     justify-content: center;
+    padding-top: 1%;
   }
 
   p {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .summary {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .groupdatasets {
     padding-top: 5%;
+  }
+  .dataset:hover{
+    color: #7245b8;
   }
 }

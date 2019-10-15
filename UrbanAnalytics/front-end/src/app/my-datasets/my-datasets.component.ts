@@ -45,6 +45,4 @@ export class MyDatasetsComponent implements OnInit {
     }
     console.log(this.groupDatasets);
   }
-
-
 }
