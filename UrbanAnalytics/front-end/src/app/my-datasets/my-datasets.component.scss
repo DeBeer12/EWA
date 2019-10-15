@@ -6,20 +6,37 @@
     display: flex;
     justify-content: center;
     padding-top: 1%;
+
+  }
+
+  .horzline {
+    border: 0.5px solid white;
   }
 
   p {
     font-size: 30px;
+    padding-top: -0.5%;
   }
 
   .summary {
     font-size: 20px;
   }
 
-  .groupdatasets {
-    padding-top: 5%;
+  br{
+   display: block;
+    margin-bottom: 1px;
+    font-size: 2px;
   }
-  .dataset:hover{
+
+  .dataset {
+    padding-bottom: 1%;
+  }
+
+  .groupdatasets {
+    padding-top: 2%;
+  }
+
+  .dataset:hover {
     color: #7245b8;
   }
 }

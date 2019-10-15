@@ -11,14 +11,16 @@
   left: 50%;
   margin: -100px 100px 0 -150px;
   // background-image: linear-gradient(to bottom, grey);
-  background-color:  rgba(138, 138, 138, 0.048);
+  background-color: rgba(138, 138, 138, 0.048);
   border-radius: 0.5rem;
   box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.12);
 }
 
 h1 {
-  padding-left: 70px;
-  padding-top: 30px;
+  padding-left: 90px;
+  padding-top: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
 }
 
 p {
@@ -43,14 +45,18 @@ input[type="password"] {
   border-radius: 12px;
   margin-bottom: 20px;
   color: white;
-  
+  outline:none;
+}
+//when its invalid
+input:not(:placeholder-shown) {
+  border-color: hsl(0, 76%, 50%);
 }
 
-//als de input iet valid is 
-input.ng-touched.ng-invalid{
-
-  border: 1px solid red;
+/* Show green borders when valid */
+input:valid {
+  border-color: hsl(120, 76%, 50%);
 }
+
 
 p.remember_me {
   float: left;
@@ -70,7 +76,6 @@ p.remember_me {
     margin-right: 4px;
     vertical-align: middle;
   }
-  
 }
 
 input {
@@ -97,4 +102,10 @@ form {
     border: none;
     border-radius: 12px;
   }
+  button:hover{
+  background-color: orange;
+
 }
+}
+
+
