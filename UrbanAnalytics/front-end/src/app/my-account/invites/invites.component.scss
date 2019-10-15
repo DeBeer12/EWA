@@ -1,12 +1,19 @@
+@import "../../../styles.scss";
+
 .contentContainer {
   margin: 50px 46px 46px 0px;
   position: relative;
   height: 80%;
 
+  @include for-phone-only {
+    padding: 0;
+    margin: 0;
+  }
+
   .list {
     overflow: scroll;
     overflow-x: hidden;
-    height: 40rem;
+    height: 35rem;
 
     ul {
       margin-top: 15px;
