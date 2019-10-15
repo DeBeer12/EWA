@@ -18,10 +18,25 @@
     text-align: center;
   }
 
+
   // Dataset details container
   .datasetDetails {
     grid-area: datasetDetails;
     margin: 0 7% 0 0;
+    font-size: 1.2rem;
+
+    .datasetDetailsContent{
+      margin-top: 10px;
+      border-collapse: separate;
+      border-spacing: 15px;
+
+      .dataSetDetailsContentTable{
+        border-radius: 8px;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 8px;
+      }
+    }
   }
 
   // Dataset list container
@@ -37,19 +52,20 @@
       height: 100%;
       background-color: #202430;
       border-radius: 8px;
-      border-collapse:separate;
-      border-spacing:15px;
+      border-collapse: separate;
+      border-spacing: 15px;
+      font-size: 1.2rem;
 
       .dataset{
         margin: 5px;
         transition-property: all;
-        transition-duration: 1.5s;
+        transition-duration: 1s;
       }
 
       .dataset:hover{
         margin: 20px;
         border-radius: 5px;
-        color: #c05e2c;
+        color: #ad54ff;
         cursor: pointer;
       }
     }
