@@ -40,6 +40,69 @@
   user-select: none;
 }
 
+.right-wrapper {
+  display: flex;
+}
+
+.icon-wrapper {
+  margin-right: 60px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-wrapper {
+  position: relative;
+
+  i {
+    transform: scale(1.75);
+  }
+
+  .amount-wrapper {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: 26px;
+    right: -12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    border-radius: 50%;
+
+
+    .amount {
+      align-content: center;
+      font-size: 14px;
+    }
+  }
+
+  .dropout-message {
+    width: 300px;
+    height: 60px;
+    background-color: white;
+    position: absolute;
+    top: 65px;
+    right: -40px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      bottom: 25px;
+      background-color: white;
+      transform: rotateZ(45deg);
+      right: 27px;
+    }
+
+    span {
+      color: black;
+      font-size: 16px;
+    }
+  }
+}
+
 .account-text-wrapper {
   display: flex;
   align-items: flex-end;
