@@ -11,12 +11,20 @@ import {MemberListService} from "../../../services/memberList/member-list.servic
   styleUrls: ['./group-members.component.scss']
 })
 export class GroupMembersComponent implements OnInit {
-members = [];
+  members = [];
+  img;
+  imgHeight: number;
+
   constructor(private memberListService: MemberListService) {
     this.members = this.memberListService.getMyItems();
-}
+    this.img = document.getElementById('profilePic');
+  }
 
 
   ngOnInit() {
+  }
+
+  public getImgheight() {
+    this.imgHeight = this.img.height;
   }
 }

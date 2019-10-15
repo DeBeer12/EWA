@@ -1,36 +1,39 @@
 <div class="datasets">
   <h1>National</h1>
-  <hr/>
+  <hr class="horzline"/>
   <div class="national" *ngFor="let dataset of allDatasets">
-    <div *ngIf="dataset.sort == 1">
-      <p class="dataset">{{dataset.name}}<br/>
-        <span class="summary">{{dataset.summary}}</span></p>
+    <div class="dataset" *ngIf="dataset.sort == 1">
+      <p class="name">{{dataset.name}}</p>
+      <p class="summary">{{dataset.summary}}</p>
     </div>
   </div>
+
   <h1>EU</h1>
-  <hr/>
+  <hr class="horzline"/>
   <div class="Eu" *ngFor="let dataset of allDatasets">
-    <div *ngIf="dataset.sort == 0">
-      <p class="dataset">{{dataset.name}}<br/>
-        <span class="summary">{{dataset.summary}}</span></p>
+    <div class="dataset" *ngIf="dataset.sort == 0">
+      <p class="name">{{dataset.name}}</p>
+      <p class="summary">{{dataset.summary}}</p>
     </div>
   </div>
+
   <h1>Region</h1>
-  <hr/>
+  <hr class="horzline"/>
   <div class="region" *ngFor="let dataset of allDatasets">
-    <div *ngIf="dataset.sort == 2">
-      <p class="dataset">{{dataset.name}}<br/>
-        <span class="summary">{{dataset.summary}}</span></p>
+    <div class="dataset" *ngIf="dataset.sort == 2">
+      <p class="name">{{dataset.name}}</p>
+      <p class="summary">{{dataset.summary}}</p>
     </div>
   </div>
+
   <div class="groupdatasets">
-    <div *ngFor="let group of mygroups; let dataset of groupDatasets;" >
+    <div *ngFor="let group of mygroups; let dataset of groupDatasets;">
       <h1>{{group.getName()}}</h1>
-      <hr/>
+      <hr class="horzline"/>
       <div *ngFor="let dataset of allDatasets">
-        <div *ngIf="group.getSort() == dataset.getSort()">
-          <p class="dataset">{{dataset.name}}<br/>
-            <span class="summary">{{dataset.summary}}</span></p></div>
+        <div class="dataset" *ngIf="group.getSort() == dataset.getSort()">
+          <p class="name">{{dataset.name}}</p>
+          <p class="summary">{{dataset.summary}}</p></div>
       </div>
     </div>
   </div>
