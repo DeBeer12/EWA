@@ -53,8 +53,10 @@
 
 .icon-wrapper {
   position: relative;
+  cursor: pointer;
+  padding: 0 10px;
 
-  i {
+  .big-icon {
     transform: scale(1.75);
   }
 
@@ -63,13 +65,12 @@
     height: 16px;
     position: absolute;
     bottom: 26px;
-    right: -12px;
+    right: -2px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: orange;
     border-radius: 50%;
-
 
     .amount {
       align-content: center;
@@ -79,28 +80,47 @@
 
   .dropout-message {
     width: 300px;
-    height: 60px;
+    // height: 60px;
     background-color: white;
     position: absolute;
-    top: 65px;
+    top: 60px;
     right: -40px;
+    opacity: 0;
+    visibility: hidden;
 
-    &:before {
-      content: "";
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      bottom: 25px;
-      background-color: white;
-      transform: rotateZ(45deg);
-      right: 27px;
+    &.active {
+      opacity: 1;
+      visibility: visible;
     }
 
-    span {
-      color: black;
-      font-size: 16px;
+    ul {
+      background: #202430;
+      box-shadow: rgba(0, 0, 0, 0.1)5px 5px 6px 0px;
+
+      li {
+        padding: 10px 0px;
+        color: white;
+        list-style-type: none;
+        transition: all .2s;
+        cursor: pointer;
+
+        i {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+
+        &:hover {
+          background-color: #2b3041;
+          ;
+        }
+      }
     }
   }
+}
+
+.icon-wrapper:hover .dropout-message {
+  visibility: visible;
+  opacity: 1;
 }
 
 .account-text-wrapper {
